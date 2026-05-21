@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bulk Giphy ZIP Downloader</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <style>
+    body {
+      background: #0f172a;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 260px;
+      background: #1e293b;
+      border: none;
+      border-radius: 14px;
+      padding: 15px;
+      color: white;
+      font-size: 16px;
+      resize: vertical;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 16px;
+      background: #2563eb;
+      border: none;
+      border-radius: 14px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .status {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 18px;
+      color: #93c5fd;
+    }
+
+    .log {
+      margin-top: 30px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      background: #1e293b;
+      padding: 14px;
+      border-radius: 12px;
+      word-break: break-word;
+    }
+
+    .success {
+      color: #4ade80;
+    }
+
+    .error {
+      color: #f87171;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Bulk Giphy ZIP Downloader</h1>
+
+  <p>
+    Paste unlimited Giphy links below (one per line)
+  </p>
+
+  <textarea id="links" placeholder="https://giphy.com/gifs/..."></textarea>
+
+  <button onclick="startDownload()">
+    Download ZIP
+  </button>
+
+  <div class="status" id="status"></div>
+
+  <div class="log" id="log"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
